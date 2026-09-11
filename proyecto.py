@@ -82,3 +82,96 @@ def ordenar():
     tiempo = max(tiempoC, tiempoP, tiempoE, tiempoT, tiempoQ)
     print("Su total al pagar serian", f"{total:g}", "mxn")
     print("El tiempo de espera sera de", tiempo, "minutos")
+while True:
+    print("""
+    --------------------
+    ¿Que desea hacer?
+    --------------------
+    - Ver menu
+    - Ordenar
+    - Salir
+    --------------------
+    """)
+    opcion = input("seleciona una opcion: ")
+    if opcion.lower() == "ver menu" or opcion.lower() == "menu":
+        print("""
+        ------
+        Chilaquiles
+        Costo: $90
+        Totopos cubiertos de salsa roja o verde con pollo, crema y queso
+        Tiempo de espera: 10 minutos
+        ------
+        Pozole
+        Costo: $150
+        Pozole grande surtido
+        Tiempo de espera: 20 minutos
+        ------
+        Enchiladas
+        Costo: $120
+        Tortillas rellenas de pollo bañadas en salsa roja, acompañadas de crema y queso
+        Tiempo de espera: 15 minutos
+        ------
+        Tacos al Pastor
+        Costo: $100
+        Tacos de carne al pastor acompañados de cebolla, cilantro y piña
+        Tiempo de espera: 12 minutos
+        ------
+        Quesadillas
+        Costo: $80
+        Tortillas de harina rellenas de queso y acompañadas de guacamole y salsa
+        Tiempo de espera: 8 minutos
+
+        """)
+        while True:
+            opcionz = input("¿Desea ordenar?: ")
+            if opcionz.lower() == "si":
+                ordenar()
+                break
+                
+            elif opcionz.lower() == "no":
+                opcionh = input("¿Desea salir al menu?: ")
+                if opcionh.lower() == "si":
+                    break
+                elif opcionh.lower() == "no":
+                    print("regresando al menu...")
+                    print("""
+        ------
+        Chilaquiles
+        Costo: $90
+        Totopos cubiertos de salsa roja o verde con pollo, crema y queso
+        Tiempo de espera: 10 minutos
+        ------
+        Pozole
+        Costo: $150
+        Pozole grande surtido
+        Tiempo de espera: 20 minutos
+        ------
+        Enchiladas
+        Costo: $120
+        Tortillas rellenas de pollo bañadas en salsa roja, acompañadas de crema y queso
+        Tiempo de espera: 15 minutos
+        ------
+        Tacos al Pastor
+        Costo: $100
+        Tacos de carne al pastor acompañados de cebolla, cilantro y piña
+        Tiempo de espera: 12 minutos
+        ------
+        Quesadillas
+        Costo: $80
+        Tortillas de harina rellenas de queso y acompañadas de guacamole y salsa
+        Tiempo de espera: 8 minutos  
+
+        """)
+            else:
+                print("opcion no valida")
+
+    elif  opcion.lower() == "ordenar":
+        ordenar()
+        exit()
+
+    elif opcion.lower() == "salir":
+        print("Saliendo del programa...")
+        break
+
+    else:
+        print ("opcion no valida")
